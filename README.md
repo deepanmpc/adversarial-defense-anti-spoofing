@@ -3,7 +3,7 @@
 > **Guidewire DEVTrails 2026 — Phase 1 Submission**
 > Parametric Insurance Platform for Gig & Delivery Workers
 
-**Live Demo:** [Open index.html in browser after cloning](#how-to-run)
+**Live Demo:** [Open index.html in browser after cloning](https://youtu.be/QxlpiDC9JUU)
 
 ---
 
