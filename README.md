@@ -209,4 +209,3 @@ Fraud rings that attempt to defeat this system must simultaneously spoof GPS, fa
 
 ---
 
-*Built for Guidewire DEVTrails 2026 — Phase 1. Designed to be deployable as a pluggable defense layer within an existing microservice architecture, with no changes to GPS infrastructure required.*
