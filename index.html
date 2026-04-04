@@ -29,7 +29,6 @@
       min-height: 100vh;
       overflow-x: hidden;
     }
-    /* noise overlay */
     body::before {
       content: '';
       position: fixed;
@@ -39,8 +38,6 @@
       z-index: 0;
       opacity: 0.4;
     }
-
-    /* ── HEADER ── */
     header {
       display: flex;
       align-items: center;
@@ -50,11 +47,7 @@
       position: relative;
       z-index: 10;
     }
-    .logo {
-      font-size: 1.4rem;
-      font-weight: 800;
-      letter-spacing: -0.02em;
-    }
+    .logo { font-size: 1.4rem; font-weight: 800; letter-spacing: -0.02em; }
     .logo span { color: var(--accent); }
     .badge {
       font-family: var(--font-mono);
@@ -67,425 +60,163 @@
       letter-spacing: 0.1em;
       text-transform: uppercase;
     }
-
-    /* ── HERO ── */
     .hero {
-      position: relative;
-      z-index: 10;
+      position: relative; z-index: 10;
       text-align: center;
       padding: 5rem 2rem 3rem;
     }
     .hero-tag {
-      font-family: var(--font-mono);
-      font-size: 0.7rem;
-      color: var(--accent);
-      letter-spacing: 0.2em;
-      text-transform: uppercase;
-      margin-bottom: 1.2rem;
-      opacity: 0;
-      animation: fadeUp 0.6s 0.1s forwards;
+      font-family: var(--font-mono); font-size: 0.7rem; color: var(--accent);
+      letter-spacing: 0.2em; text-transform: uppercase; margin-bottom: 1.2rem;
+      opacity: 0; animation: fadeUp 0.6s 0.1s forwards;
     }
     .hero h1 {
-      font-size: clamp(2.2rem, 5vw, 4rem);
-      font-weight: 800;
-      line-height: 1.05;
-      letter-spacing: -0.03em;
-      margin-bottom: 1.5rem;
-      opacity: 0;
-      animation: fadeUp 0.6s 0.25s forwards;
+      font-size: clamp(2.2rem, 5vw, 4rem); font-weight: 800;
+      line-height: 1.05; letter-spacing: -0.03em; margin-bottom: 1.5rem;
+      opacity: 0; animation: fadeUp 0.6s 0.25s forwards;
     }
-    .hero h1 em {
-      font-style: normal;
-      color: var(--accent);
-    }
+    .hero h1 em { font-style: normal; color: var(--accent); }
     .hero p {
-      font-size: 1.05rem;
-      color: var(--muted);
-      max-width: 560px;
-      margin: 0 auto 2.5rem;
-      line-height: 1.7;
-      opacity: 0;
-      animation: fadeUp 0.6s 0.4s forwards;
+      font-size: 1.05rem; color: var(--muted); max-width: 560px;
+      margin: 0 auto 2.5rem; line-height: 1.7;
+      opacity: 0; animation: fadeUp 0.6s 0.4s forwards;
     }
     .hero-quote {
-      font-family: var(--font-mono);
-      font-size: 0.85rem;
-      color: var(--accent3);
-      border-left: 2px solid var(--accent3);
-      padding-left: 1rem;
-      max-width: 480px;
-      margin: 0 auto;
-      text-align: left;
-      opacity: 0;
-      animation: fadeUp 0.6s 0.55s forwards;
+      font-family: var(--font-mono); font-size: 0.85rem; color: var(--accent3);
+      border-left: 2px solid var(--accent3); padding-left: 1rem;
+      max-width: 480px; margin: 0 auto; text-align: left;
+      opacity: 0; animation: fadeUp 0.6s 0.55s forwards;
     }
-
-    /* ── PIPELINE SECTION ── */
     .section {
-      position: relative;
-      z-index: 10;
-      max-width: 1100px;
-      margin: 0 auto;
-      padding: 3rem 2rem;
+      position: relative; z-index: 10;
+      max-width: 1100px; margin: 0 auto; padding: 3rem 2rem;
     }
     .section-label {
-      font-family: var(--font-mono);
-      font-size: 0.65rem;
-      color: var(--muted);
-      letter-spacing: 0.2em;
-      text-transform: uppercase;
-      margin-bottom: 1.5rem;
+      font-family: var(--font-mono); font-size: 0.65rem; color: var(--muted);
+      letter-spacing: 0.2em; text-transform: uppercase; margin-bottom: 1.5rem;
     }
-    .section h2 {
-      font-size: 1.8rem;
-      font-weight: 800;
-      margin-bottom: 2.5rem;
-      letter-spacing: -0.02em;
-    }
-
-    /* pipeline steps */
+    .section h2 { font-size: 1.8rem; font-weight: 800; margin-bottom: 2.5rem; letter-spacing: -0.02em; }
     .pipeline {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-      gap: 0;
-      border: 1px solid var(--border);
-      border-radius: 4px;
-      overflow: hidden;
-      margin-bottom: 3rem;
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 0; border: 1px solid var(--border); border-radius: 4px;
+      overflow: hidden; margin-bottom: 3rem;
     }
     .pipe-step {
-      padding: 1.8rem 1.4rem;
-      border-right: 1px solid var(--border);
-      position: relative;
-      cursor: default;
-      transition: background 0.2s;
+      padding: 1.8rem 1.4rem; border-right: 1px solid var(--border);
+      cursor: default; transition: background 0.2s;
     }
     .pipe-step:last-child { border-right: none; }
     .pipe-step:hover { background: rgba(255,255,255,0.03); }
-    .pipe-num {
-      font-family: var(--font-mono);
-      font-size: 0.65rem;
-      color: var(--muted);
-      margin-bottom: 0.8rem;
-      letter-spacing: 0.15em;
-    }
-    .pipe-icon {
-      font-size: 1.5rem;
-      margin-bottom: 0.6rem;
-    }
-    .pipe-title {
-      font-size: 0.85rem;
-      font-weight: 600;
-      margin-bottom: 0.5rem;
-      color: var(--text);
-    }
-    .pipe-desc {
-      font-family: var(--font-mono);
-      font-size: 0.65rem;
-      color: var(--muted);
-      line-height: 1.6;
-    }
+    .pipe-num { font-family: var(--font-mono); font-size: 0.65rem; color: var(--muted); margin-bottom: 0.8rem; letter-spacing: 0.15em; }
+    .pipe-icon { font-size: 1.5rem; margin-bottom: 0.6rem; }
+    .pipe-title { font-size: 0.85rem; font-weight: 600; margin-bottom: 0.5rem; }
+    .pipe-desc { font-family: var(--font-mono); font-size: 0.65rem; color: var(--muted); line-height: 1.6; }
     .pipe-latency {
-      margin-top: 0.8rem;
-      font-family: var(--font-mono);
-      font-size: 0.6rem;
-      color: var(--accent);
-      background: rgba(0,229,255,0.07);
-      display: inline-block;
-      padding: 0.15rem 0.5rem;
-      border-radius: 2px;
+      margin-top: 0.8rem; font-family: var(--font-mono); font-size: 0.6rem;
+      color: var(--accent); background: rgba(0,229,255,0.07);
+      display: inline-block; padding: 0.15rem 0.5rem; border-radius: 2px;
     }
-
-    /* ── CLAIM SIMULATOR ── */
     .simulator {
-      background: var(--surface);
-      border: 1px solid var(--border);
-      border-radius: 4px;
-      overflow: hidden;
-      margin-bottom: 3rem;
+      background: var(--surface); border: 1px solid var(--border);
+      border-radius: 4px; overflow: hidden; margin-bottom: 3rem;
     }
     .sim-header {
-      padding: 1.2rem 1.8rem;
-      border-bottom: 1px solid var(--border);
-      display: flex;
-      align-items: center;
-      gap: 1rem;
+      padding: 1.2rem 1.8rem; border-bottom: 1px solid var(--border);
+      display: flex; align-items: center; gap: 1rem;
     }
-    .sim-header h3 {
-      font-size: 0.95rem;
-      font-weight: 600;
-    }
-    .sim-header span {
-      font-family: var(--font-mono);
-      font-size: 0.65rem;
-      color: var(--muted);
-    }
-    .sim-body {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 0;
-    }
-    .sim-inputs {
-      padding: 1.8rem;
-      border-right: 1px solid var(--border);
-    }
+    .sim-header h3 { font-size: 0.95rem; font-weight: 600; }
+    .sim-header span { font-family: var(--font-mono); font-size: 0.65rem; color: var(--muted); }
+    .sim-body { display: grid; grid-template-columns: 1fr 1fr; }
+    .sim-inputs { padding: 1.8rem; border-right: 1px solid var(--border); }
     .sim-inputs h4 {
-      font-family: var(--font-mono);
-      font-size: 0.65rem;
-      color: var(--muted);
-      letter-spacing: 0.15em;
-      text-transform: uppercase;
-      margin-bottom: 1.4rem;
+      font-family: var(--font-mono); font-size: 0.65rem; color: var(--muted);
+      letter-spacing: 0.15em; text-transform: uppercase; margin-bottom: 1.4rem;
     }
-    .signal-row {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      margin-bottom: 1rem;
-      gap: 1rem;
-    }
-    .signal-label {
-      font-size: 0.8rem;
-      color: var(--text);
-      flex: 1;
-    }
-    .signal-label small {
-      display: block;
-      font-family: var(--font-mono);
-      font-size: 0.6rem;
-      color: var(--muted);
-      margin-top: 0.1rem;
-    }
-    .toggle {
-      position: relative;
-      width: 42px;
-      height: 22px;
-      flex-shrink: 0;
-    }
+    .signal-row { display: flex; align-items: center; justify-content: space-between; margin-bottom: 1rem; gap: 1rem; }
+    .signal-label { font-size: 0.8rem; flex: 1; }
+    .signal-label small { display: block; font-family: var(--font-mono); font-size: 0.6rem; color: var(--muted); margin-top: 0.1rem; }
+    .toggle { position: relative; width: 42px; height: 22px; flex-shrink: 0; }
     .toggle input { opacity: 0; width: 0; height: 0; }
     .toggle-slider {
-      position: absolute;
-      inset: 0;
-      background: var(--border);
-      border-radius: 22px;
-      cursor: pointer;
-      transition: background 0.2s;
+      position: absolute; inset: 0; background: var(--border);
+      border-radius: 22px; cursor: pointer; transition: background 0.2s;
     }
     .toggle-slider::before {
-      content: '';
-      position: absolute;
-      width: 16px;
-      height: 16px;
-      left: 3px;
-      top: 3px;
-      background: var(--muted);
-      border-radius: 50%;
+      content: ''; position: absolute; width: 16px; height: 16px;
+      left: 3px; top: 3px; background: var(--muted); border-radius: 50%;
       transition: transform 0.2s, background 0.2s;
     }
     .toggle input:checked + .toggle-slider { background: rgba(0,229,255,0.2); }
-    .toggle input:checked + .toggle-slider::before {
-      transform: translateX(20px);
-      background: var(--accent);
-    }
+    .toggle input:checked + .toggle-slider::before { transform: translateX(20px); background: var(--accent); }
     .analyze-btn {
-      margin-top: 1.5rem;
-      width: 100%;
-      padding: 0.9rem;
-      background: var(--accent);
-      color: #000;
-      border: none;
-      border-radius: 3px;
-      font-family: var(--font-display);
-      font-size: 0.85rem;
-      font-weight: 700;
-      cursor: pointer;
-      letter-spacing: 0.05em;
-      transition: opacity 0.2s, transform 0.15s;
+      margin-top: 1.5rem; width: 100%; padding: 0.9rem;
+      background: var(--accent); color: #000; border: none; border-radius: 3px;
+      font-family: var(--font-display); font-size: 0.85rem; font-weight: 700;
+      cursor: pointer; letter-spacing: 0.05em; transition: opacity 0.2s, transform 0.15s;
     }
     .analyze-btn:hover { opacity: 0.85; transform: translateY(-1px); }
     .analyze-btn:active { transform: translateY(0); }
-
-    /* result panel */
-    .sim-result {
-      padding: 1.8rem;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      min-height: 380px;
-    }
-    .result-placeholder {
-      text-align: center;
-      color: var(--muted);
-      font-family: var(--font-mono);
-      font-size: 0.7rem;
-      line-height: 2;
-    }
+    .sim-result { padding: 1.8rem; display: flex; flex-direction: column; justify-content: center; min-height: 380px; }
+    .result-placeholder { text-align: center; color: var(--muted); font-family: var(--font-mono); font-size: 0.7rem; line-height: 2; }
     .result-score-wrap { display: none; }
     .result-score-wrap.visible { display: block; }
-    .score-bar-wrap {
-      margin-bottom: 1.5rem;
-    }
-    .score-label {
-      font-family: var(--font-mono);
-      font-size: 0.65rem;
-      color: var(--muted);
-      margin-bottom: 0.4rem;
-      display: flex;
-      justify-content: space-between;
-    }
-    .score-bar {
-      height: 6px;
-      background: var(--border);
-      border-radius: 3px;
-      overflow: hidden;
-    }
-    .score-fill {
-      height: 100%;
-      border-radius: 3px;
-      transition: width 0.8s cubic-bezier(0.16,1,0.3,1);
-      width: 0%;
-    }
-    .verdict {
-      border-radius: 3px;
-      padding: 1.2rem 1.4rem;
-      margin-top: 1rem;
-    }
-    .verdict-title {
-      font-size: 1rem;
-      font-weight: 700;
-      margin-bottom: 0.4rem;
-    }
-    .verdict-tier {
-      font-family: var(--font-mono);
-      font-size: 0.7rem;
-      margin-bottom: 0.8rem;
-    }
-    .verdict-reason {
-      font-family: var(--font-mono);
-      font-size: 0.68rem;
-      line-height: 1.7;
-      color: var(--text);
-      opacity: 0.85;
-    }
+    .score-bar-wrap { margin-bottom: 1.5rem; }
+    .score-label { font-family: var(--font-mono); font-size: 0.65rem; color: var(--muted); margin-bottom: 0.4rem; display: flex; justify-content: space-between; }
+    .score-bar { height: 6px; background: var(--border); border-radius: 3px; overflow: hidden; }
+    .score-fill { height: 100%; border-radius: 3px; transition: width 0.8s cubic-bezier(0.16,1,0.3,1); width: 0%; }
+    .verdict { border-radius: 3px; padding: 1.2rem 1.4rem; margin-top: 1rem; }
+    .verdict-title { font-size: 1rem; font-weight: 700; margin-bottom: 0.4rem; }
+    .verdict-tier { font-family: var(--font-mono); font-size: 0.7rem; margin-bottom: 0.8rem; }
+    .verdict-reason { font-family: var(--font-mono); font-size: 0.68rem; line-height: 1.7; opacity: 0.85; }
     .verdict.approve { background: rgba(34,197,94,0.08); border: 1px solid rgba(34,197,94,0.25); }
     .verdict.approve .verdict-title { color: var(--approve); }
     .verdict.challenge { background: rgba(245,158,11,0.08); border: 1px solid rgba(245,158,11,0.25); }
     .verdict.challenge .verdict-title { color: var(--challenge); }
     .verdict.review { background: rgba(239,68,68,0.08); border: 1px solid rgba(239,68,68,0.25); }
     .verdict.review .verdict-title { color: var(--review); }
-
-    /* signal tags */
-    .signal-tags {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.4rem;
-      margin-top: 1rem;
-    }
-    .stag {
-      font-family: var(--font-mono);
-      font-size: 0.58rem;
-      padding: 0.2rem 0.5rem;
-      border-radius: 2px;
-      border: 1px solid;
-    }
+    .signal-tags { display: flex; flex-wrap: wrap; gap: 0.4rem; margin-top: 1rem; }
+    .stag { font-family: var(--font-mono); font-size: 0.58rem; padding: 0.2rem 0.5rem; border-radius: 2px; border: 1px solid; }
     .stag.ok { color: var(--approve); border-color: rgba(34,197,94,0.3); background: rgba(34,197,94,0.06); }
     .stag.warn { color: var(--challenge); border-color: rgba(245,158,11,0.3); background: rgba(245,158,11,0.06); }
     .stag.bad { color: var(--review); border-color: rgba(239,68,68,0.3); background: rgba(239,68,68,0.06); }
-
-    /* ── TIERS TABLE ── */
     .tiers {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 1px;
-      background: var(--border);
-      border: 1px solid var(--border);
-      border-radius: 4px;
-      overflow: hidden;
-      margin-bottom: 3rem;
+      display: grid; grid-template-columns: repeat(3, 1fr);
+      gap: 1px; background: var(--border); border: 1px solid var(--border);
+      border-radius: 4px; overflow: hidden; margin-bottom: 3rem;
     }
-    .tier-card {
-      background: var(--surface);
-      padding: 1.8rem 1.5rem;
-    }
-    .tier-score {
-      font-family: var(--font-mono);
-      font-size: 0.65rem;
-      margin-bottom: 0.8rem;
-    }
+    .tier-card { background: var(--surface); padding: 1.8rem 1.5rem; }
+    .tier-score { font-family: var(--font-mono); font-size: 0.65rem; margin-bottom: 0.8rem; }
     .tier-card:nth-child(1) .tier-score { color: var(--approve); }
     .tier-card:nth-child(2) .tier-score { color: var(--challenge); }
     .tier-card:nth-child(3) .tier-score { color: var(--review); }
     .tier-card h3 { font-size: 1rem; font-weight: 700; margin-bottom: 0.5rem; }
     .tier-card p { font-family: var(--font-mono); font-size: 0.68rem; color: var(--muted); line-height: 1.7; }
-
-    /* ── METRICS ── */
     .metrics {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 1px;
-      background: var(--border);
-      border: 1px solid var(--border);
-      border-radius: 4px;
-      overflow: hidden;
-      margin-bottom: 3rem;
+      display: grid; grid-template-columns: repeat(4, 1fr);
+      gap: 1px; background: var(--border); border: 1px solid var(--border);
+      border-radius: 4px; overflow: hidden; margin-bottom: 3rem;
     }
-    .metric {
-      background: var(--surface);
-      padding: 2rem 1.5rem;
-      text-align: center;
+    .metric { background: var(--surface); padding: 2rem 1.5rem; text-align: center; }
+    .metric-value { font-size: 2.2rem; font-weight: 800; letter-spacing: -0.04em; color: var(--accent); margin-bottom: 0.4rem; }
+    .metric-label { font-family: var(--font-mono); font-size: 0.62rem; color: var(--muted); line-height: 1.5; }
+    .insight-box {
+      background: rgba(184,255,87,0.04); border: 1px solid rgba(184,255,87,0.2);
+      border-radius: 4px; padding: 2rem; margin-bottom: 3rem;
     }
-    .metric-value {
-      font-size: 2.2rem;
-      font-weight: 800;
-      letter-spacing: -0.04em;
-      color: var(--accent);
-      margin-bottom: 0.4rem;
-    }
-    .metric-label {
-      font-family: var(--font-mono);
-      font-size: 0.62rem;
-      color: var(--muted);
-      line-height: 1.5;
-    }
-
-    /* ── FOOTER ── */
+    .insight-box h3 { font-size: 1rem; font-weight: 700; color: var(--accent3); margin-bottom: 1rem; }
+    .insight-box p { font-family: var(--font-mono); font-size: 0.72rem; color: var(--muted); line-height: 1.8; }
     footer {
-      position: relative;
-      z-index: 10;
-      border-top: 1px solid var(--border);
-      padding: 2rem 3rem;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
+      position: relative; z-index: 10; border-top: 1px solid var(--border);
+      padding: 2rem 3rem; display: flex; justify-content: space-between; align-items: center;
     }
-    footer p {
-      font-family: var(--font-mono);
-      font-size: 0.65rem;
-      color: var(--muted);
-    }
-    footer .final-line {
-      font-size: 0.75rem;
-      font-weight: 600;
-      color: var(--accent3);
-      font-family: var(--font-display);
-    }
-
-    /* ANIMATIONS */
+    footer p { font-family: var(--font-mono); font-size: 0.65rem; color: var(--muted); }
+    footer .final-line { font-size: 0.75rem; font-weight: 600; color: var(--accent3); }
     @keyframes fadeUp {
       from { opacity: 0; transform: translateY(16px); }
       to   { opacity: 1; transform: translateY(0); }
     }
-    .animate-in {
-      opacity: 0;
-      transform: translateY(20px);
-      transition: opacity 0.5s ease, transform 0.5s ease;
-    }
-    .animate-in.visible {
-      opacity: 1;
-      transform: translateY(0);
-    }
-
-    /* RESPONSIVE */
+    .animate-in { opacity: 0; transform: translateY(20px); transition: opacity 0.5s ease, transform 0.5s ease; }
+    .animate-in.visible { opacity: 1; transform: translateY(0); }
     @media (max-width: 768px) {
       .sim-body { grid-template-columns: 1fr; }
       .sim-inputs { border-right: none; border-bottom: 1px solid var(--border); }
@@ -500,10 +231,9 @@
 
   <header>
     <div class="logo">Claim<span>Shield</span></div>
-    <div class="badge">Guidewire DEVTrails 2026 — Phase 1</div>
+    <div class="badge">Guidewire DEVTrails 2026 — Phase 2: Scale</div>
   </header>
 
-  <!-- HERO -->
   <section class="hero">
     <p class="hero-tag">Adversarial Defense & Anti-Spoofing Platform</p>
     <h1>GPS coordinates are a claim,<br/>not <em>proof.</em></h1>
@@ -511,7 +241,6 @@
     <blockquote class="hero-quote">Fraud must fake signals. Reality produces them naturally.</blockquote>
   </section>
 
-  <!-- PIPELINE -->
   <section class="section">
     <p class="section-label">Detection Architecture</p>
     <h2>5-Layer Trust Pipeline</h2>
@@ -548,66 +277,52 @@
         <div class="pipe-num">LAYER 05</div>
         <div class="pipe-icon">🧠</div>
         <div class="pipe-title">LLM Reasoning</div>
-        <div class="pipe-desc">Auditability, not detection. Synthesizes upstream signals into a human-readable reviewer summary.</div>
+        <div class="pipe-desc">Auditability, not detection. Plain-language reviewer summary from all upstream signals.</div>
         <div class="pipe-latency">if escalated</div>
       </div>
+    </div>
+
+    <!-- INSIGHT BOX -->
+    <div class="insight-box animate-in">
+      <h3>Why This Is Architecturally Different</h3>
+      <p>Most fraud systems evaluate claims in isolation and ask: "Is this claim suspicious?" This system models the entire claims network in real time and asks: "Is this claim consistent — across physics, behavior, history, and network topology — with a human being in genuine distress?" The distinction is not cosmetic. A single fraudulent claim looks like noise. Five hundred synchronized fraudulent claims from the same toolkit, triggered by the same Telegram alert — that's a graph signature. This system is built to see it.</p>
     </div>
 
     <!-- SIMULATOR -->
     <div class="simulator animate-in">
       <div class="sim-header">
         <h3>🔍 Claim Analyzer — Live Simulator</h3>
-        <span>Toggle signals to simulate a worker's device profile</span>
+        <span>Toggle signals to simulate a worker's device profile at claim time</span>
       </div>
       <div class="sim-body">
         <div class="sim-inputs">
           <h4>Device Signal Profile</h4>
-
           <div class="signal-row">
-            <div class="signal-label">GPS in Storm Zone
-              <small>Claimed location matches alert area</small>
-            </div>
+            <div class="signal-label">GPS in Storm Zone<small>Claimed location matches alert area</small></div>
             <label class="toggle"><input type="checkbox" id="sig-gps" checked /><span class="toggle-slider"></span></label>
           </div>
-
           <div class="signal-row">
-            <div class="signal-label">Motion Anomaly Detected
-              <small>Accelerometer near-stationary</small>
-            </div>
+            <div class="signal-label">Motion Anomaly Detected<small>Accelerometer near-stationary for 40+ min</small></div>
             <label class="toggle"><input type="checkbox" id="sig-motion" /><span class="toggle-slider"></span></label>
           </div>
-
           <div class="signal-row">
-            <div class="signal-label">Strong Home Wi-Fi Detected
-              <small>BSSID contradicts storm-zone GPS</small>
-            </div>
+            <div class="signal-label">Strong Home Wi-Fi Detected<small>BSSID contradicts storm-zone GPS</small></div>
             <label class="toggle"><input type="checkbox" id="sig-wifi" /><span class="toggle-slider"></span></label>
           </div>
-
           <div class="signal-row">
-            <div class="signal-label">Cell Tower Mismatch
-              <small>MLAT location contradicts GPS</small>
-            </div>
+            <div class="signal-label">Cell Tower Mismatch<small>MLAT location contradicts GPS by 12km</small></div>
             <label class="toggle"><input type="checkbox" id="sig-cell" /><span class="toggle-slider"></span></label>
           </div>
-
           <div class="signal-row">
-            <div class="signal-label">Known Spoofing APK
-              <small>Root detection / app signature match</small>
-            </div>
+            <div class="signal-label">Known Spoofing APK<small>Root detection / app signature match</small></div>
             <label class="toggle"><input type="checkbox" id="sig-apk" /><span class="toggle-slider"></span></label>
           </div>
-
           <div class="signal-row">
-            <div class="signal-label">Part of Claim Cluster
-              <small>5+ claims same geofence / 5 min</small>
-            </div>
+            <div class="signal-label">Part of Claim Cluster<small>23 workers, same toolkit, 4-min window</small></div>
             <label class="toggle"><input type="checkbox" id="sig-cluster" /><span class="toggle-slider"></span></label>
           </div>
-
           <button class="analyze-btn" onclick="analyzeClaim()">Analyze Claim →</button>
         </div>
-
         <div class="sim-result">
           <div class="result-placeholder" id="result-placeholder">
             &gt; awaiting claim input...<br/>
@@ -616,13 +331,8 @@
           </div>
           <div class="result-score-wrap" id="result-wrap">
             <div class="score-bar-wrap">
-              <div class="score-label">
-                <span>FRAUD PROBABILITY</span>
-                <span id="score-pct">0%</span>
-              </div>
-              <div class="score-bar">
-                <div class="score-fill" id="score-fill"></div>
-              </div>
+              <div class="score-label"><span>FRAUD PROBABILITY</span><span id="score-pct">0%</span></div>
+              <div class="score-bar"><div class="score-fill" id="score-fill"></div></div>
             </div>
             <div id="verdict-box" class="verdict"></div>
             <div class="signal-tags" id="signal-tags"></div>
@@ -631,61 +341,45 @@
       </div>
     </div>
 
-    <!-- TIERS -->
-    <h2 class="animate-in">Tiered Response Model</h2>
+    <h2 class="animate-in">Tiered Response — Do Not Penalize Uncertainty, Resolve It</h2>
     <div class="tiers animate-in">
       <div class="tier-card">
         <div class="tier-score">fraud_score &lt; 0.25</div>
         <h3>✅ Auto-Approve</h3>
-        <p>Claim processes instantly. Payout within SLA. Zero friction. Covers the clear majority of legitimate claims.</p>
+        <p>Instant payout within SLA. Zero friction. Covers the clear majority of claims with no intervention.</p>
       </div>
       <div class="tier-card">
         <div class="tier-score">0.25 ≤ score &lt; 0.65</div>
         <h3>⚠️ Soft Challenge</h3>
-        <p>One-tap confirmation sent. If offline due to network degradation, a 2-hour grace queue activates automatically. No penalty.</p>
+        <p>One-tap confirmation sent. If offline due to network degradation, 2-hour grace queue activates automatically. No penalty for going dark in a storm.</p>
       </div>
       <div class="tier-card">
         <div class="tier-score">fraud_score ≥ 0.65</div>
         <h3>🔴 Human Review</h3>
-        <p>LLM summary pre-loaded for reviewer. No punitive action until human confirms. Cleared claims leave zero permanent record.</p>
+        <p>LLM audit summary pre-loaded for reviewer. Worker notified non-accusatorily. No action until human confirms. Cleared claims leave zero permanent record.</p>
       </div>
     </div>
 
-    <!-- METRICS -->
     <h2 class="animate-in">Expected Impact</h2>
     <div class="metrics animate-in">
-      <div class="metric">
-        <div class="metric-value">&gt;90%</div>
-        <div class="metric-label">Fraud ring detection before payout stage</div>
-      </div>
-      <div class="metric">
-        <div class="metric-value">70–85%</div>
-        <div class="metric-label">Reduction in false payouts in high-risk geographies</div>
-      </div>
-      <div class="metric">
-        <div class="metric-value">&lt;3%</div>
-        <div class="metric-label">False positive rate via tiered UX & grace handling</div>
-      </div>
-      <div class="metric">
-        <div class="metric-value">~40%</div>
-        <div class="metric-label">Human review load reduction via LLM explanations</div>
-      </div>
+      <div class="metric"><div class="metric-value">&gt;90%</div><div class="metric-label">Fraud ring detection before payout stage</div></div>
+      <div class="metric"><div class="metric-value">70–85%</div><div class="metric-label">Reduction in false payouts in high-risk geographies</div></div>
+      <div class="metric"><div class="metric-value">&lt;3%</div><div class="metric-label">False positive rate via tiered UX & grace handling</div></div>
+      <div class="metric"><div class="metric-value">~40%</div><div class="metric-label">Human review load reduction via LLM summaries</div></div>
     </div>
   </section>
 
   <footer>
-    <p>deepanmpc / adversarial-defense-anti-spoofing · Guidewire DEVTrails 2026</p>
-    <div class="final-line">We don't detect fraud — we make it unscalable.</div>
+    <p>deepanmpc / adversarial-defense-anti-spoofing · Guidewire DEVTrails 2026 Phase 2</p>
+    <div class="final-line">We don't detect fraud — we make it economically unscalable.</div>
   </footer>
 
   <script>
-    // Scroll animations
     const observer = new IntersectionObserver((entries) => {
       entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
     }, { threshold: 0.1 });
     document.querySelectorAll('.animate-in').forEach(el => observer.observe(el));
 
-    // Claim Analyzer Logic
     function analyzeClaim() {
       const gps     = document.getElementById('sig-gps').checked;
       const motion  = document.getElementById('sig-motion').checked;
@@ -694,55 +388,49 @@
       const apk     = document.getElementById('sig-apk').checked;
       const cluster = document.getElementById('sig-cluster').checked;
 
-      // Weighted scoring
       let score = 0;
-      if (!gps)    score += 0.05;  // no GPS in zone — minor negative
-      if (motion)  score += 0.20;  // near-stationary
-      if (wifi)    score += 0.25;  // home Wi-Fi contradiction
-      if (cell)    score += 0.20;  // MLAT mismatch
-      if (apk)     score += 0.25;  // known spoofing tool
-      if (cluster) score += 0.15;  // ring membership
+      if (!gps)    score += 0.05;
+      if (motion)  score += 0.20;
+      if (wifi)    score += 0.25;
+      if (cell)    score += 0.20;
+      if (apk)     score += 0.25;
+      if (cluster) score += 0.15;
       score = Math.min(score, 0.99);
 
-      // Determine verdict
       let tier, cls, title, reason;
       const tags = [];
 
       if (!motion && !wifi && !cell && !apk && !cluster) {
-        tier = 'TIER 1 — AUTO-APPROVE';
-        cls  = 'approve';
+        tier = 'TIER 1 — AUTO-APPROVE'; cls = 'approve';
         title = '✅ Legitimate Claim — Processing';
-        reason = 'All signals consistent with genuine distress. No contradictions detected across sensor fusion, network, or device layers. Payout authorized within SLA.';
+        reason = 'All signals consistent with genuine distress. No contradictions across sensor fusion, network, or device layers. Payout authorized within SLA.';
         tags.push({ label: 'GPS ✓', t: 'ok' }, { label: 'Motion ✓', t: 'ok' }, { label: 'Network ✓', t: 'ok' });
       } else if (score < 0.45) {
-        tier = 'TIER 2 — SOFT CHALLENGE';
-        cls  = 'challenge';
+        tier = 'TIER 2 — SOFT CHALLENGE'; cls = 'challenge';
         title = '⚠️ Soft Challenge Issued';
         reason = 'Mild signal inconsistencies detected. One-tap re-confirmation sent. If worker is offline due to weather, grace queue activates for 2 hours. No penalty applied.';
-        if (motion)  tags.push({ label: 'Motion anomaly', t: 'warn' });
-        if (cell)    tags.push({ label: 'Cell mismatch', t: 'warn' });
+        if (motion) tags.push({ label: 'Motion anomaly', t: 'warn' });
+        if (cell)   tags.push({ label: 'Cell mismatch', t: 'warn' });
         if (!motion && !cell) tags.push({ label: 'Low risk signals', t: 'warn' });
         tags.push({ label: 'Grace queue ready', t: 'ok' });
       } else if (score < 0.65) {
-        tier = 'TIER 2 — SOFT CHALLENGE (elevated)';
-        cls  = 'challenge';
+        tier = 'TIER 2 — SOFT CHALLENGE (elevated)'; cls = 'challenge';
         title = '⚠️ Elevated Challenge';
-        reason = 'Multiple contradicting signals detected. Strong home Wi-Fi BSSID contradicts storm-zone GPS. Cell tower triangulation inconsistent. Awaiting worker re-confirmation before escalation.';
+        reason = 'Multiple contradicting signals. Home Wi-Fi BSSID contradicts storm-zone GPS. Cell tower triangulation inconsistent with claimed location. Awaiting worker re-confirmation.';
         if (wifi)   tags.push({ label: 'BSSID home mismatch', t: 'bad' });
         if (motion) tags.push({ label: 'Stationary device', t: 'warn' });
         if (cell)   tags.push({ label: 'MLAT contradiction', t: 'bad' });
         tags.push({ label: 'Awaiting response', t: 'warn' });
       } else {
-        tier = 'TIER 3 — HUMAN REVIEW';
-        cls  = 'review';
+        tier = 'TIER 3 — HUMAN REVIEW'; cls = 'review';
         title = '🔴 Flagged — Human Review Queued';
         const reasons = [];
-        if (apk)     reasons.push('Known spoofing APK signature on device');
-        if (cluster) reasons.push('Member of a 23-worker claim cluster (4-min window)');
-        if (wifi)    reasons.push('Home Wi-Fi BSSID contradicts claimed GPS');
+        if (apk)     reasons.push('Known spoofing APK signature detected on device');
+        if (cluster) reasons.push('Member of a 23-worker claim cluster (4-minute window)');
+        if (wifi)    reasons.push('Home Wi-Fi BSSID contradicts claimed GPS location');
         if (cell)    reasons.push('Cell tower MLAT places worker 12km from claimed location');
         if (motion)  reasons.push('Accelerometer shows no movement for 40+ minutes');
-        reason = reasons.join('. ') + '. LLM summary generated for reviewer. No action taken until human confirmation.';
+        reason = reasons.join('. ') + '. LLM audit summary generated for reviewer. No action taken until human confirmation.';
         if (apk)     tags.push({ label: 'Spoofing APK', t: 'bad' });
         if (cluster) tags.push({ label: 'Fraud cluster', t: 'bad' });
         if (wifi)    tags.push({ label: 'BSSID fraud signal', t: 'bad' });
@@ -750,7 +438,6 @@
         if (motion)  tags.push({ label: 'Stationary 40min', t: 'bad' });
       }
 
-      // Render
       document.getElementById('result-placeholder').style.display = 'none';
       const wrap = document.getElementById('result-wrap');
       wrap.classList.add('visible');
@@ -766,8 +453,7 @@
       document.getElementById('verdict-box').innerHTML =
         `<div class="verdict-title">${title}</div><div class="verdict-tier">${tier}</div><div class="verdict-reason">${reason}</div>`;
 
-      const tagsEl = document.getElementById('signal-tags');
-      tagsEl.innerHTML = tags.map(t => `<span class="stag ${t.t}">${t.label}</span>`).join('');
+      document.getElementById('signal-tags').innerHTML = tags.map(t => `<span class="stag ${t.t}">${t.label}</span>`).join('');
     }
   </script>
 </body>
